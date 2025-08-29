@@ -1,7 +1,6 @@
 package com.exam.entity;
 
-import jakarta.persistence.*;
-import org.springframework.data.repository.cdi.Eager;
+import javax.persistence.*;
 
 @Entity
 public class UserRole {

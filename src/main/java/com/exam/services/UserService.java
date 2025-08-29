@@ -15,4 +15,8 @@ public interface UserService {
 
     //delete user by Id
     public void deleteUser(Long userId);
+
+    //update user by Id
+
+    public User updateUser(String username, User user);
 }

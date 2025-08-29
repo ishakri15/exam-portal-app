@@ -12,6 +12,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/user")
+@CrossOrigin(origins = "http://localhost:58303")
 public class UserController {
 
     @Autowired
@@ -43,6 +44,11 @@ public class UserController {
     @DeleteMapping("/{userId}")
     public void deleteUser(@PathVariable("userId") Long userId){
         this.userService.deleteUser(userId);
+    }
+
+    @PutMapping("/{username}")
+    public User updateUser(@PathVariable("username") String username, @RequestBody User user) {
+          return this.userService.updateUser(username, user);
     }
 
 }

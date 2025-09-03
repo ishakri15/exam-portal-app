@@ -36,16 +36,10 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 
-    //This BCryptPasswordEncoder will be used when you will be saving password in encrypted format in database
-//
-//    @Bean
-//    public BCryptPasswordEncoder getPasswordEncoder() {
-//        return new BCryptPasswordEncoder();
-//    }
 
     @Bean
-    public PasswordEncoder getPasswordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
     @Override

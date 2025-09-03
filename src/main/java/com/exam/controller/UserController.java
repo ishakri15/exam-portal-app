@@ -28,9 +28,6 @@ public class UserController {
 
        //encoding password with Bcrypt Password Encoder
         user.setPassword(this.bCryptPasswordEncoder.encode(user.getPassword()));
-
-
-
         Set<UserRole> roles = new HashSet<>();
 
         Role role = new Role();

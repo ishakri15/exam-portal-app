@@ -33,7 +33,7 @@ public class Quiz {
         this.title = title;
         this.description = description;
         this.maxMarks = maxMarks;
-        NoOfQues = noOfQues;
+        this.NoOfQues = noOfQues;
         this.active = active;
     }
 
